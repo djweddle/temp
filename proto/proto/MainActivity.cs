@@ -13,9 +13,11 @@ using CocosSharp;
 
 namespace proto
 {
-    [Activity(Label = "proto", MainLauncher = true, Icon = "@drawable/icon",
+    [Activity(Label = "BallFollow", MainLauncher = true, Icon = "@drawable/icon",
         AlwaysRetainTaskState = true,
         LaunchMode = LaunchMode.SingleInstance,
+        Theme = "@android:style/Theme.NoTitleBar",
+        ScreenOrientation = ScreenOrientation.Portrait,
         ConfigurationChanges = ConfigChanges.Orientation | ConfigChanges.ScreenSize | ConfigChanges.Keyboard | ConfigChanges.KeyboardHidden)]
     public class MainActivity : Activity
     {
@@ -43,8 +45,8 @@ namespace proto
                 var contentSearchPaths = new List<string>() { "Fonts", "Sounds" };
                 CCSizeI viewSize = gameView.ViewSize;
 
-                int width = 1024;
-                int height = 768;
+                int width = 768;
+                int height = 1027;
 
                 // Set world dimensions
                 gameView.DesignResolution = new CCSizeI(width, height);
